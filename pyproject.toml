@@ -5,7 +5,8 @@
 [build-system]
 requires = [
     "setuptools", 
-    "wheel"
+    "wheel",
+    "requests",
 ]
 build-backend = "setuptools.build_meta"
 
@@ -47,8 +48,6 @@ lint = [
     "numpy", # needed for mypy
     "types-pyyaml", # needed for mypy
     "types-requests", # needed for mypy
-    "requests", # needed for setup
-    "setuptools", # needed for setup
 ]
 
 dev = [{ include-group = "test" }, { include-group = "lint" }]
@@ -59,9 +58,6 @@ examples = [
 
 [project.urls]
 GitHub = "https://github.com/furqan463/power-grid-bridge"
-
-[tool.uv.extra-build-dependencies]
-power-grid-bridge = ["requests", "setuptools"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
