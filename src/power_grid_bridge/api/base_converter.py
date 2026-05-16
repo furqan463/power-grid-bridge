@@ -2,6 +2,6 @@
 #
 # SPDX-License-Identifier: MPL-2.0
 
-from power_grid_bridge.api.base_converter import PowerGridBridge
-
-__all__ = ["PowerGridBridge"]
+class PowerGridBridge:
+    def __init__(self):
+        print("Converter Initiated")
